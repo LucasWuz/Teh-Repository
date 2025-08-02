@@ -1,6 +1,13 @@
 extends Node
 
 
+# Hey Lucas, this is one of those codes you write it once and never
+# touch it again, so don't worry about anything that is going on here.
+# But feel free to try to understand it - I tried my best to make
+# the code self-documented.
+
+
+signal fullscreen_toggled(is_fullscreen: bool)
 signal aspect_ratio_changed(new_ratio: AspectRatios)
 
 
@@ -25,10 +32,12 @@ var aspect_ratio: AspectRatios = AspectRatios.DEFAULT
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"toggle_fullscreen"): # F4, F11 or ALT + Enter
+	# F4, F11 or ALT + Enter
+	if event.is_action_pressed(&"toggle_fullscreen"):
 		toggle_fullscreen()
 	
-	elif event.is_action_pressed(&"toggle_aspect_ratio"): # F3 because F1 and F2 are my OBS bindings
+	# F3 because F1 and F2 are my OBS bindings
+	elif event.is_action_pressed(&"toggle_aspect_ratio"):
 		toggle_aspect_ratio()
 
 
@@ -38,6 +47,8 @@ func toggle_fullscreen() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	
+	fullscreen_toggled.emit(is_fullscreen)
 
 
 func toggle_aspect_ratio() -> void:

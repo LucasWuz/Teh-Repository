@@ -12,29 +12,12 @@ gradient = SubResource("Gradient_d66fj")
 width = 1
 height = 1
 
-[sub_resource type="Animation" id="Animation_d66fj"]
-resource_name = "Test"
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("IconTemp:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector2(536, 281), Vector2(536, 321)]
-}
-
 [sub_resource type="Animation" id="Animation_ypf15"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("IconTemp:position")
+tracks/0/path = NodePath("SoulTest:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -42,6 +25,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(536, 281)]
+}
+
+[sub_resource type="Animation" id="Animation_d66fj"]
+resource_name = "Test"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoulTest:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(536, 281), Vector2(536, 321)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ya85j"]
@@ -53,7 +53,7 @@ _data = {
 [node name="InitialSceneTest" type="Node2D"]
 
 [node name="Camera" type="Camera2D" parent="."]
-offset = Vector2(536, 301)
+offset = Vector2(536, 301.5)
 
 [node name="Black" type="Sprite2D" parent="."]
 scale = Vector2(1072, 603)
@@ -67,7 +67,7 @@ scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_0pw3y")
 centered = false
 
-[node name="IconTemp" type="Sprite2D" parent="."]
+[node name="SoulTest" type="Sprite2D" parent="."]
 position = Vector2(536, 281)
 texture = ExtResource("2_d66fj")
 

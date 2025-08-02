@@ -19,7 +19,9 @@ config/icon="uid://kqs4fwf5vjvl"
 
 [autoload]
 
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 Win="*res://autoloads/window/window.gd"
+Discord="*res://autoloads/discord/discord.gd"
 
 [display]
 
@@ -30,11 +32,11 @@ window/size/sharp_corners=true
 window/size/minimize_disabled=true
 window/size/window_width_override=1280
 window/size/window_height_override=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [file_customization]
 
