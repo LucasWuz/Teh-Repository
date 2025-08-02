@@ -26,8 +26,8 @@ func update() -> void:
 	DiscordRPC.large_image_text = large_image_text
 	DiscordRPC.small_image = small_image
 	DiscordRPC.small_image_text = small_image_text
-
+	
 	DiscordRPC.start_timestamp = int(Time.get_unix_time_from_system())
 	# DiscordRPC.end_timestamp = int(Time.get_unix_time_from_system()) + 3600 # +1 hour in unix time / "01:00:00 remaining"
-
+	
 	DiscordRPC.refresh()
